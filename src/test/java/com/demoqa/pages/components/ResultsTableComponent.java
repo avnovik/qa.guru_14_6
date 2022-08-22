@@ -9,17 +9,15 @@ public class ResultsTableComponent {
 
     private final static String TITLE_TEXT = "Thanks for submitting the form";
 
-    public ResultsTableComponent checkVisible() {
+    public void checkVisible() {
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text(TITLE_TEXT));
 
-        return this;
     }
 
-    public ResultsTableComponent checkResult(String key, String value) {
+    public void checkResult(String key, String value) {
         $(".table-responsive table").$(byText(key)).parent().shouldHave(text(value));
 
-        return this;
     }
 
     public void checkCloseModal() {
