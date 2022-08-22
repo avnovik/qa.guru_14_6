@@ -19,6 +19,7 @@ public class RegistrationFormPage {
             emailInput = $("#userEmail"),
             genderOtherSelect = $("[for=gender-radio-3]"),
             mobileNumberInput = $("#userNumber"),
+            calendarInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
             hobbiesSelect = $("#hobbiesWrapper"),
             pictureUpload = $("#uploadPicture"),
@@ -70,6 +71,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setBirthDay(String day, String month, String year) {
+        calendarInput.click();
         calendarComponent.setDate(day, month, year);
 
         return this;
