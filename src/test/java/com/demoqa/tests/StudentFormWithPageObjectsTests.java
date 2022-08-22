@@ -5,7 +5,7 @@ import com.demoqa.pages.RegistrationFormPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class StudentFormTestWithPageObjects {
+public class StudentFormWithPageObjectsTests {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     @BeforeAll
@@ -23,7 +23,7 @@ public class StudentFormTestWithPageObjects {
                 .setEmailInput("jb@007.gb")
                 .setGender()
                 .setMobileNumber("0123456789")
-                .setBirthDay("21", "July", "2008")
+                .setBirthDay("21", "July", "2010")
                 .setSubjects("A")
                 .setSubjects("ar")
                 .setHobbies("Music")
@@ -33,6 +33,7 @@ public class StudentFormTestWithPageObjects {
                 .setCity("k")
                 .submitForm()
                 .checkResultsTableVisible()
+                .checkResultsTable("Date of Birth", "21 July,2010")
                 .checkResultsTable("Address", "Wellington Square, 25")
                 .checkResultsTableIsClose();
     }
