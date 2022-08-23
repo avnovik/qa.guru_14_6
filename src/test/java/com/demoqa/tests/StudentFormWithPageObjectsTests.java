@@ -27,7 +27,7 @@ public class StudentFormWithPageObjectsTests {
                 .setSubjects("A")
                 .setSubjects("ar")
                 .setHobbies("Music")
-                .uploadPicture("Picture/Picture.pic")
+                .uploadPicture("pictures/Picture.pic")
                 .setAddress("Wellington Square, 25")
                 .setState("ha")
                 .setCity("k")
